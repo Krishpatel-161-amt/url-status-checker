@@ -1,0 +1,13 @@
+# Good Test
+checks:
+  - url: https://github.com
+    expected_status: 200
+    latency_threshold_ms: 500 
+        
+# Bad Test
+  - url: https://github.com/this-doesnt-exist
+    expected_status: 200 
+
+# Slow test 
+  - url: https://httpbin.org/delay/5
+    latency_threshold_ms: 500
