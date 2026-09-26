@@ -5,9 +5,13 @@ checks:
     latency_threshold_ms: 500 
         
 # Bad Test
-  - url: https://github.com/this-doesnt-exist
+  - url: https://httpbin.org/status/404
     expected_status: 200 
 
 # Slow test 
   - url: https://httpbin.org/delay/5
+    latency_threshold_ms: 500
+
+# Fake URL
+  - url: http://localhost:9999
     latency_threshold_ms: 500
