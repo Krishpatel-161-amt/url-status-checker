@@ -1,6 +1,6 @@
 def audit(audit_results):
     """
-    
+    Takes the raw results from runner.py and judges if the url's were unreachable,up,down or slow and returns the list
     """
     judged_results = []
     for result in audit_results:

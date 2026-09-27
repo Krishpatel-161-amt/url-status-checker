@@ -1,12 +1,12 @@
 import yaml
 
-def load_and_parse():
+def load_and_parse(config_path):
     """
     Opens and parses the yaml file, apply defaults 
     (if user didnt write expected_status and latency in the yaml) and
     hands off the list of checks to perform 
     """
-    with open('checks.yaml','r') as file:
+    with open(config_path,'r') as file:
         data = yaml.safe_load(file)
         raw_checks = data["checks"]
 

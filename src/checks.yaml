@@ -2,7 +2,7 @@
 checks:
   - url: https://github.com
     expected_status: 200
-    latency_threshold_ms: 500 
+    latency_threshold_ms: 2000
         
 # Bad Test
   - url: https://httpbin.org/status/404

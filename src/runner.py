@@ -12,7 +12,7 @@ def take_list(clean_checks):
         latency_threshold = check["latency_threshold_ms"]
         
         try:
-            response_url = requests.get(url,timeout=5)
+            response_url = requests.get(url,timeout=10)
             response_status_code = response_url.status_code
             elapsed_ms = response_url.elapsed.total_seconds() * 1000
 
