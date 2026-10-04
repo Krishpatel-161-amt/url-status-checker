@@ -1,6 +1,7 @@
 # Good Test
 checks:
-  - url: https://github.com
+  - url: https://github.com 
     expected_status: 200
     latency_threshold_ms: 2000
         
+  - url: https://github.com/Krishpatel-161-amt

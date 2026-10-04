@@ -1,10 +1,10 @@
 import sys
 import argparse
 
-from loader import load_and_parse
-from runner import take_list
-from auditor import audit
-from report import display_results
+from url_status_checker.loader import load_and_parse
+from url_status_checker.runner import take_list
+from url_status_checker.auditor import audit
+from url_status_checker.report import display_results
 
 def main():
     """
