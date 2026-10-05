@@ -1,7 +1,17 @@
 # Good Test
 checks:
-  - url: https://github.com 
+  - url: https://github.com
     expected_status: 200
     latency_threshold_ms: 2000
         
-  - url: https://github.com/Krishpatel-161-amt
+# Bad Test
+  - url: https://httpbin.org/status/404
+    expected_status: 200 
+
+# Slow test 
+  - url: https://httpbin.org/delay/5
+    latency_threshold_ms: 500
+
+# Fake URL
+  - url: http://localhost:9999
+    latency_threshold_ms: 500
