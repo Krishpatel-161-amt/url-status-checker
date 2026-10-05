@@ -1,17 +1,23 @@
-# Good Test
+# URLs checked on every push. Only UP passes; anything else fails the build.
+#
+# Fields:
+#   url                   required
+#   expected_status       optional, default 200
+#   latency_threshold_ms  optional, if left out speed is not checked
+
 checks:
   - url: https://github.com
     expected_status: 200
     latency_threshold_ms: 2000
-        
-# Bad Test
-  - url: https://httpbin.org/status/404
-    expected_status: 200 
 
-# Slow test 
-  - url: https://httpbin.org/delay/5
-    latency_threshold_ms: 500
+  - url: https://github.com/Krishpatel-161-amt
 
-# Fake URL
-  - url: http://localhost:9999
-    latency_threshold_ms: 500
+# Examples that fail on purpose. Uncomment one to see each state:
+#
+#  - url: https://httpbin.org/status/404     # DOWN: wrong status code
+#    expected_status: 200
+#
+#  - url: https://httpbin.org/delay/5        # SLOW: over the latency limit
+#    latency_threshold_ms: 500
+#
+#  - url: http://localhost:9999              # UNREACHABLE: nothing listening
